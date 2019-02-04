@@ -9,9 +9,11 @@ echo "Enter the File Name: $1"
 echo "Enter a Pattern: $2"
 echo "The Number of Phone Number: "
 grep -ce '\<[0-9]\{3\}-[0-9]\{3\}-[0-9]\{4\}\>'  $1
-grep -e '\<[0-9]\{3\}-[0-9]\{3\}-[0-9]\{4\}\>'  $1 > "phone_results.txt"
+grep -e '303-[0-9]\{3\}-[0-9]\{4\}\>'  $1
+grep -e '303-[0-9]\{3\}-[0-9]\{4\}\>'  $1 > "phone_results.txt"
 echo "The Number of email: "
 grep -ce '@.*\.' $1
+grep -e '@.*\.' $1
 grep -e '@.*\.' $1 > "email_results.txt"
 echo "The Number of matched pattern: "
 grep -ce $2 $1
